@@ -1,48 +1,23 @@
 package com.appasso.projet;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 //import javax.persistence.Id;
-import javax.persistence.Table;
+
 @Entity
 @Table
-
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Association {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
+	@Id
+	private int id;
 	@Column
-    private String Presentation;
+	private String Presentation;
 	@Column
 	private String Statut;
-	
-	public String getPresentation() {
-		return Presentation;
-	}
-	public void setPresentation(String presentation) {
-		Presentation = presentation;
-	}
-	public String getStatut() {
-		return Statut;
-	}
-	public void setStatut(String statut) {
-		Statut = statut;
-	}
-	@Override
-	public String toString() {
-		return "Association [Presentation=" + Presentation + ", Statut=" + Statut + "]";
-	}
-	public Association(String presentation, String statut) {
-		super();
-		Presentation = presentation;
-		Statut = statut;
-	}
-	public Association() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-
-
 }

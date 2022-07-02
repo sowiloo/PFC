@@ -16,16 +16,19 @@ import javax.persistence.Table;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Administration {
-
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Activity {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
-    private String CA;
+    private String nom;
     @Column
-    private String Membres;
-
+    private String DemandeJustifBancaire;
+    @Column
+    private String FicheBudget;
 
 }
-	  
+	
+	
+
+
