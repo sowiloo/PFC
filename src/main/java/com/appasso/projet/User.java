@@ -12,11 +12,11 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Utilisateur{
+public class User {
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private Integer id;
+	private Integer userID;
 	@Column
 	private char Mail;
 	@Column

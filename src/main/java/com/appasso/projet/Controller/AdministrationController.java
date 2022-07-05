@@ -31,8 +31,6 @@ import java.util.Optional;
 public class AdministrationController {
     @Autowired
     private AdministrationRepository administrationRepository;
-
-
     @GetMapping("/administrations")
     public List<Administration> getAdministration(){
         return administrationRepository.findAll();
