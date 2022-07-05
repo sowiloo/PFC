@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
@@ -27,19 +28,24 @@ import javax.persistence.*;
 public class Document {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer idDoc;
 	@Column
-	private String ContratProjet;
+	private String contratProjet;
 	@Column
-	private String DeclarationsFiscale;
+	private String declarationsFiscale;
 	@Column
-	private String DemandePaiment;
+	private String demandePaiment;
 	@Column
-	private String RapportActivite;
+	private String rapportActivite;
 	@Column
-	private String RapportFinancier;
+	private String rapportFinancier;
 	@Column
-	private String SupportCom;
+	private String supportCom;
+	@Column
+	private String statutDoc;
+
+
+
 
 
 

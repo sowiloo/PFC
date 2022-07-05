@@ -16,16 +16,19 @@ public class Utilisateur{
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private int id;
+	private Integer id;
 	@Column
 	private char Mail;
 	@Column
 	private char Password;
 	@Column
-	private int Telephon;
+	private int Telephone;
 	@Column
 	private String Role;
 	@Column
 	private String Photo;
+	@Column
+	private boolean isValid;
+
 
 }

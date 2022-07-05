@@ -15,9 +15,10 @@ import javax.persistence.*;
 public class Association {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
-	private int id;
+	private Integer id;
 	@Column
 	private String Presentation;
 	@Column
-	private String Statut;
+	private String statutAsso;
+
 }

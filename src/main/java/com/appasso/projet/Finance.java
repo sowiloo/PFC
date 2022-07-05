@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class Finance {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 	@Column
 	private float Charges;
 	@Column
@@ -28,5 +28,7 @@ public class Finance {
 	private float Donations;
 	@Column
 	private String nomBailleur;
+	@Column
+	private int date;
 
 }

@@ -1,3 +1,5 @@
+package com.appasso.projet.Controller;
+
 import com.appasso.projet.Administration;
 
 import com.appasso.repository.AdministrationRepository;
@@ -5,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 //import org.springframework.web.bind.annotation.*;
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +18,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import javax.validation.Valid;
+
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -34,7 +38,7 @@ public class AdministrationController {
         return administrationRepository.findAll();
     }
 
-    @GetMapping("/administrations/(id)")
+    @GetMapping("/administrations/{id}")
     public ResponseEntity<Administration> getAdministration(@PathVariable Integer id){
         Optional<Administration> administration = administrationRepository.findById(id);
         return ResponseEntity.ok().body(administration.get());

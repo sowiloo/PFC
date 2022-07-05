@@ -19,13 +19,13 @@ import javax.persistence.Table;
 public class Activity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     @Column
-    private String nom;
+    private String nomActivity;
     @Column
-    private String DemandeJustifBancaire;
+    private String demandeJustifbancaire;
     @Column
-    private String FicheBudget;
+    private String ficheBudget;
 
 }
 	
